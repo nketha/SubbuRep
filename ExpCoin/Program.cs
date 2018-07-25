@@ -38,7 +38,7 @@ namespace ExpCoin
             decimal totalAmount = subbuCoin1 + subbuCoin2;
             Console.WriteLine("\n Total Coins Value: " + totalAmount);
 
-            while (blockCount != 10) {
+            while (blockCount != 5) {
 
                 while (option != 1) {
 
