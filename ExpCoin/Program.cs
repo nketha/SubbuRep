@@ -44,7 +44,6 @@ namespace ExpCoin
 
                     Console.WriteLine("\n Enter Send amount:");
                     sendAmount = Convert.ToDecimal(Console.ReadLine());
-
                     Transaction subbuFunding = new Transaction() {
                         Outputs =
 
@@ -54,7 +53,6 @@ namespace ExpCoin
         new TxOut(subbuCoin2.ToString(), subbu.PubKey)
     }
                     };
-
                     Coin[] subbuCoins = subbuFunding
                                             .Outputs
                                             .Select((o, i) => new Coin(new OutPoint(subbuFunding.GetHash(), i), o))
@@ -71,7 +69,7 @@ namespace ExpCoin
                     Console.WriteLine(tx);
                     Console.ReadLine();
                     transactionList.Add(tx);
-                    Console.WriteLine("Press 1 for Mine or 2 for next transaction:");
+                    Console.WriteLine("Press 1 for Mine block or 2 go to next transaction:");
                     option = int.Parse(Console.ReadLine());
                 }
                 chain.SetTip(CreateBlock(current, blockCount, transactionList, chain));
