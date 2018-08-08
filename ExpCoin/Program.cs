@@ -81,7 +81,6 @@ namespace ExpCoin
         {
             Block block = Consensus.Main.ConsensusFactory.CreateBlock();
             if (chain != null) {
-
                 block.Header.HashPrevBlock = chain.Tip.HashBlock;
                 block.Transactions.AddRange(transactionList);
                 Console.WriteLine("Previous Block Hash" + block.Header.HashPrevBlock);
